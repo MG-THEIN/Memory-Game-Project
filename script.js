@@ -11,6 +11,41 @@ var gridEl = document.querySelector('.grid');
 
 gridEl.addEventListener('click', showFun);
 
+var images = [catImg, crocodileImg, dog1Img, dinosourImg, dog2Img, lionImg];
+
+
+function showFun(e){
+    e.preventDefault();
+    const item = e.target;
+    const itemClass = item.classList[0]
+    switch (itemClass){
+        case "cat":
+            catImg.src = "images/cat.jpg";
+            break;
+        case "crocodile":
+            crocodileImg.src = "images/crocodile.jpg";
+            break;
+        case "dog1":
+            dog1Img.src = "images/dog.jpg";
+            break;
+        case "dinosour":
+            dinosourImg.src = "images/dinosour.jpeg";
+            break;
+        case "dog2":
+            dog2Img.src = "images/dog.jpg";
+            break;
+        case "lion":
+            lionImg.src = "images/lion.jpg";
+            break;
+
+        
+        default:
+            alert('f');
+    }
+}
+
+
+/*
 function showFun(e){
     e.preventDefault();
     const item = e.target;
@@ -32,4 +67,4 @@ function showFun(e){
         lionImg.src = "images/lion.jpg";
     } else return
 
-}
+} */
