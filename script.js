@@ -13,6 +13,26 @@ gridEl.addEventListener('click', showFun);
 
 var images = [catImg, crocodileImg, dog1Img, dinosourImg, dog2Img, lionImg];
 
+function animateAndRestart(){
+    // Animinations
+    gridEl.classList.remove('restart1');
+    gridEl.classList.remove('restart2');
+
+    gridEl.classList.add('restart1');
+    gridEl.addEventListener('transitionend', function(){
+        gridEl.classList.add('restart2');
+    })
+    // Restart
+    gridEl.addEventListener('transitionend', function(){
+
+        catImg.src = "images/pickme.jpeg";
+        crocodileImg.src = "images/pickme.jpeg";
+        dog1Img.src = "images/pickme.jpeg";
+        dinosourImg.src = "images/pickme.jpeg";
+        dog2Img.src = "images/pickme.jpeg";
+        lionImg.src = "images/pickme.jpeg";
+    });
+}
 
 function showFun(e){
     e.preventDefault();
@@ -30,24 +50,7 @@ function showFun(e){
                     return;
                 } else {
                     alert("You Lose");
-                    // Animinations
-                    gridEl.classList.remove('restart1');
-                    gridEl.classList.remove('restart2');
-
-                    gridEl.classList.add('restart1');
-                    gridEl.addEventListener('transitionend', function(){
-                        gridEl.classList.add('restart2');
-                    })
-                    // Restart
-                    gridEl.addEventListener('transitionend', function(){
-                
-                        catImg.src = "images/pickme.jpeg";
-                        crocodileImg.src = "images/pickme.jpeg";
-                        dog1Img.src = "images/pickme.jpeg";
-                        dinosourImg.src = "images/pickme.jpeg";
-                        dog2Img.src = "images/pickme.jpeg";
-                        lionImg.src = "images/pickme.jpeg";
-                    });
+                    animateAndRestart();
                 }
             break;
 
@@ -62,25 +65,7 @@ function showFun(e){
                     return;
                 } else {
                     alert("You Lose");
-
-                    // Animinations
-                    gridEl.classList.remove('restart1');
-                    gridEl.classList.remove('restart2');
-
-                    gridEl.classList.add('restart1');
-                    gridEl.addEventListener('transitionend', function(){
-                        gridEl.classList.add('restart2');
-                    })
-                    // Restart
-                    gridEl.addEventListener('transitionend', function(){
-                
-                        catImg.src = "images/pickme.jpeg";
-                        crocodileImg.src = "images/pickme.jpeg";
-                        dog1Img.src = "images/pickme.jpeg";
-                        dinosourImg.src = "images/pickme.jpeg";
-                        dog2Img.src = "images/pickme.jpeg";
-                        lionImg.src = "images/pickme.jpeg";
-                    });
+                    animateAndRestart();
                 }
             break;
 
@@ -89,6 +74,7 @@ function showFun(e){
 
             if (dog2Img.getAttribute('src') == "images/dog.jpg"){
                 alert('You Won');
+                animateAndRestart();
             }
             else if ((catImg.getAttribute('src') == "images/pickme.jpeg") && 
                 (crocodileImg.getAttribute('src') == "images/pickme.jpeg") &&
@@ -97,25 +83,7 @@ function showFun(e){
                     return;
                 } else {
                     alert("You Lose");
-
-                    // Animinations
-                    gridEl.classList.remove('restart1');
-                    gridEl.classList.remove('restart2');
-
-                    gridEl.classList.add('restart1');
-                    gridEl.addEventListener('transitionend', function(){
-                        gridEl.classList.add('restart2');
-                    })
-                    // Restart
-                    gridEl.addEventListener('transitionend', function(){
-                
-                        catImg.src = "images/pickme.jpeg";
-                        crocodileImg.src = "images/pickme.jpeg";
-                        dog1Img.src = "images/pickme.jpeg";
-                        dinosourImg.src = "images/pickme.jpeg";
-                        dog2Img.src = "images/pickme.jpeg";
-                        lionImg.src = "images/pickme.jpeg";
-                    });
+                    animateAndRestart();
                 }
             break;
 
@@ -130,25 +98,7 @@ function showFun(e){
                     return;
                 } else {
                     alert("You Lose");
-
-                    // Animinations
-                    gridEl.classList.remove('restart1');
-                    gridEl.classList.remove('restart2');
-
-                    gridEl.classList.add('restart1');
-                    gridEl.addEventListener('transitionend', function(){
-                        gridEl.classList.add('restart2');
-                    })
-                    // Restart
-                    gridEl.addEventListener('transitionend', function(){
-                
-                        catImg.src = "images/pickme.jpeg";
-                        crocodileImg.src = "images/pickme.jpeg";
-                        dog1Img.src = "images/pickme.jpeg";
-                        dinosourImg.src = "images/pickme.jpeg";
-                        dog2Img.src = "images/pickme.jpeg";
-                        lionImg.src = "images/pickme.jpeg";
-                    });
+                    animateAndRestart();
                 }
             break;
 
@@ -157,6 +107,7 @@ function showFun(e){
 
             if (dog1Img.getAttribute('src') == "images/dog.jpg"){
                 alert('You Won');
+                animateAndRestart();
             }
             else if ((catImg.getAttribute('src') == "images/pickme.jpeg") && 
                 (crocodileImg.getAttribute('src') == "images/pickme.jpeg") &&
@@ -165,25 +116,7 @@ function showFun(e){
                     return;
                 } else {
                     alert("You Lose");
-
-                    // Animinations
-                    gridEl.classList.remove('restart1');
-                    gridEl.classList.remove('restart2');
-
-                    gridEl.classList.add('restart1');
-                    gridEl.addEventListener('transitionend', function(){
-                        gridEl.classList.add('restart2');
-                    })
-                    // Restart
-                    gridEl.addEventListener('transitionend', function(){
-                
-                        catImg.src = "images/pickme.jpeg";
-                        crocodileImg.src = "images/pickme.jpeg";
-                        dog1Img.src = "images/pickme.jpeg";
-                        dinosourImg.src = "images/pickme.jpeg";
-                        dog2Img.src = "images/pickme.jpeg";
-                        lionImg.src = "images/pickme.jpeg";
-                    });
+                    animateAndRestart();
                 }
             break;
 
@@ -198,25 +131,7 @@ function showFun(e){
                     return;
                 } else {
                     alert("You Lose");
-
-                    // Animinations
-                    gridEl.classList.remove('restart1');
-                    gridEl.classList.remove('restart2');
-
-                    gridEl.classList.add('restart1');
-                    gridEl.addEventListener('transitionend', function(){
-                        gridEl.classList.add('restart2');
-                    })
-                    // Restart
-                    gridEl.addEventListener('transitionend', function(){
-                
-                        catImg.src = "images/pickme.jpeg";
-                        crocodileImg.src = "images/pickme.jpeg";
-                        dog1Img.src = "images/pickme.jpeg";
-                        dinosourImg.src = "images/pickme.jpeg";
-                        dog2Img.src = "images/pickme.jpeg";
-                        lionImg.src = "images/pickme.jpeg";
-                    });
+                    animateAndRestart();
                 }
             break;
 
