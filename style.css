@@ -37,6 +37,7 @@ h1{
     grid-template-columns: 1fr 1fr 1fr;
     row-gap: 5px;
     column-gap: 5px;
+    transition: all 1s ease;
 }
 
 img{
@@ -52,4 +53,8 @@ img{
 
 .results{
     color: white;
+}
+
+.restart{
+    transform: rotate(360deg);
 }

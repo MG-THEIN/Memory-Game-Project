@@ -21,26 +21,105 @@ function showFun(e){
     switch (itemClass){
         case "cat":
             catImg.src = "images/cat.jpg";
+        
+            if ((crocodileImg.getAttribute('src') == "images/pickme.jpeg") && 
+                (dog1Img.getAttribute('src') == "images/pickme.jpeg") &&
+                (dinosourImg.getAttribute('src') == "images/pickme.jpeg") &&
+                (dog2Img.getAttribute('src') == "images/pickme.jpeg") &&
+                (lionImg.getAttribute('src') == "images/pickme.jpeg")){
+                    return;
+                } else {
+                    alert("You Lose");
+                    // Restart
+                    gridEl.classList.add('restart');
+                    gridEl.addEventListener('transitionend', function(){
+                        catImg.src = "images/pickme.jpeg";
+                        crocodileImg.src = "images/pickme.jpeg";
+                        dog1Img.src = "images/pickme.jpeg";
+                        dinosourImg.src = "images/pickme.jpeg";
+                        dog2Img.src = "images/pickme.jpeg";
+                        lionImg.src = "images/pickme.jpeg";
+                    });
+                }
             break;
+
         case "crocodile":
             crocodileImg.src = "images/crocodile.jpg";
+
+            if ((catImg.getAttribute('src') == "images/pickme.jpeg") && 
+                (dog1Img.getAttribute('src') == "images/pickme.jpeg") &&
+                (dinosourImg.getAttribute('src') == "images/pickme.jpeg") &&
+                (dog2Img.getAttribute('src') == "images/pickme.jpeg") &&
+                (lionImg.getAttribute('src') == "images/pickme.jpeg")){
+                    return;
+                } else {
+                    alert("You Lose");
+                }
             break;
+
         case "dog1":
             dog1Img.src = "images/dog.jpg";
+
+            if (dog2Img.getAttribute('src') == "images/dog.jpg"){
+                alert('You Won');
+            }
+            else if ((catImg.getAttribute('src') == "images/pickme.jpeg") && 
+                (crocodileImg.getAttribute('src') == "images/pickme.jpeg") &&
+                (dinosourImg.getAttribute('src') == "images/pickme.jpeg") &&
+                (lionImg.getAttribute('src') == "images/pickme.jpeg")){
+                    return;
+                } else {
+                    alert("You Lose");
+                }
             break;
+
         case "dinosour":
             dinosourImg.src = "images/dinosour.jpeg";
+
+            if ((catImg.getAttribute('src') == "images/pickme.jpeg") && 
+                (crocodileImg.getAttribute('src') == "images/pickme.jpeg") &&
+                (dog1Img.getAttribute('src') == "images/pickme.jpeg") &&
+                (dog2Img.getAttribute('src') == "images/pickme.jpeg") &&
+                (lionImg.getAttribute('src') == "images/pickme.jpeg")){
+                    return;
+                } else {
+                    alert("You Lose");
+                }
             break;
+
         case "dog2":
             dog2Img.src = "images/dog.jpg";
+
+            if (dog1Img.getAttribute('src') == "images/dog.jpg"){
+                alert('You Won');
+            }
+            else if ((catImg.getAttribute('src') == "images/pickme.jpeg") && 
+                (crocodileImg.getAttribute('src') == "images/pickme.jpeg") &&
+                (dinosourImg.getAttribute('src') == "images/pickme.jpeg") &&
+                (lionImg.getAttribute('src') == "images/pickme.jpeg")){
+                    return;
+                } else {
+                    alert("You Lose");
+                }
             break;
+
         case "lion":
             lionImg.src = "images/lion.jpg";
+
+            if ((catImg.getAttribute('src') == "images/pickme.jpeg") && 
+                (crocodileImg.getAttribute('src') == "images/pickme.jpeg") &&
+                (dog1Img.getAttribute('src') == "images/pickme.jpeg") &&
+                (dinosourImg.getAttribute('src') == "images/pickme.jpeg") &&
+                (dog2Img.getAttribute('src') == "images/pickme.jpeg")){
+                    return;
+                } else {
+                    alert("You Lose");
+                }
             break;
 
         
         default:
-            alert('f');
+            return;
     }
 }
 
